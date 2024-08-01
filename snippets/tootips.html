@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips using html and css</title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .tooltip{
+        position: relative;
+        display: inline-block;
+        margin-top: 65%;
+        margin-left: 30%;
+    }
+    .tooltipText{
+        opacity: 0;
+        width: 120px;
+        background-color: #020202a7;
+        color: #f1f1f1;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px 0;
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+        z-index: 1;
+        transition: opacity 300ms ease-in-out;
+    }
+    .tooltipText::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left:50%;
+        margin-left: -5px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: #020202a7 transparent transparent transparent;
+    }
+    .tooltip:hover .tooltipText{
+        opacity: 1;
+    }
+</style>
+<body>
+    <div class="tooltip">Touch me!
+        <span class="tooltipText">Tooltip</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>  
+        <img src="img/hero-bg.jpg" alt="" width="200"  >
+        <img src="img/herox-bg.jpg" alt="" width="200"  >
+        <img src="img/dawid-zawila--G3rw6Y02D0-unsplash.jpg" alt="" width="200"  >
+        <img src="img/luke-chesser-eICUFSeirc0-unsplash.jpg" alt=""width="200">
+
+
+</body>
+<script>
+    const defult_image = "img/defult.png";
+    const images = document.querySelectorAll("img");
+    images.forEach((image) => {
+        image.addEventListener("error", ()=>{
+            image.src = defult_image;
+        })
+    });
+</script>
+</html>

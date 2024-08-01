@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome hover effet with html and css</title>
+</head>
+<style>
+    button{
+        justify-content: space-between;
+        display: flex;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: none;
+        transition: 300ms;
+        width: 100px;
+        padding: 15px 0px;
+        border: 5px;
+        overflow: hidden;
+    }
+    .text,
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .text{
+        margin: auto 0;
+        width: 75%;
+        font-size: 0.75rem;
+        border-right: 1px solid rgba(60, 58, 58,0.694);
+    }
+    .icon{
+        transition: 300ms;
+        margin: auto 0;
+        width: 25%;
+        font-size: 1.2rem;
+    }
+    button:hover{
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    button:hover .text{
+        margin-left: -100px;
+    }
+    button:hover .icon{
+        transform:scale(1.5);
+        width: 100%;
+    }
+</style>
+<body>
+    <button>
+        <span class="text">Close</span>
+        <span class="icon">&times;</span>
+    </button>
+</body>
+</html>

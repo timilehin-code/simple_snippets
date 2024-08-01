@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popover modal with html and css</title>
+</head>
+<style>
+    button {
+        background-color: black;
+        color: white;
+        padding: 10px 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    form {
+        background-color: #f1f1f1;
+        padding: 40px;
+        border: none;
+        overflow: hidden;
+    }
+
+    form input {
+        width: 90%;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    form button {
+        margin-top: 8px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <button popovertarget="mymodal">Open Modal</button>
+    <form action="" id="mymodal" popover>
+        <input type="text" placeholder="name"><br>
+        <input type="email"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

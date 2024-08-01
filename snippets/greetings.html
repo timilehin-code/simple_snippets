@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock with HTML, CSS, and JS</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clock span{
+    background-color: blueviolet;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: 0 5px 15px #000000ae;
+    color: #f1f1f1;
+}
+.wrapper{
+    text-align: center;
+    padding: 200px 0 0;
+}
+.clock{
+    font-size: 58px;
+    margin: 15px;
+}
+.clock span:first-child{
+    margin-left: 0;
+}
+.clock span:last-child{
+    background-color: blue;
+}
+
+</style>
+<body>
+    <div class="wrapper">
+        <h1 class="clock"></h1>
+    </div>
+</body>
+<script>
+    const clock = ()=>{
+        let date = new Date();
+        let hour = date.getHours();
+        let min = date.getMinutes();
+        let sec = date.getSeconds();
+        let midday;
+        hours = updateTime(hour);
+        min =updateTime(min);
+        sec = updateTime(sec);
+        midday =(hour >= 12)? "PM" : "AM";
+        document.querySelector(".clock").innerHTML ="<span>" + hour
++ "</span>" + ":" + "<span>" + min + "</span>" + ":" + "<span>" + sec + "</span>" + ":" + "<span>" + midday + "</span>";
+
+var time = setTimeout( function (){
+    clock();
+}, 1000)
+    }
+
+    function updateTime(k){
+        if (k < 10) 
+        {
+            return "0" + k ;
+        } else {
+            return k;
+        }
+    }
+    clock();
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>glassmophism effect with html and css</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url(img/tim-marshall-AtbAMeNzQmE-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+form{
+    border: 1px solid rgba(255,255,255,.5);
+    box-shadow: 0 1px 12px rgba(0,0,0,.25) ;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    width: 400px;
+    background: transparent;
+    padding: 18px 15px;
+    border-radius: 5px;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+input{
+    width: 95%;
+    margin-top: 20px;
+    padding: 5px;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+button{
+    font-size: 18px;
+    font-weight: bold;
+    background: white;
+    color: black;
+    border: 2px solid rgba(255,255,255,.5);
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    transition: all 300ms ease;
+}
+button:hover{
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+.rember{
+    display: flex;
+    margin-top: 15px;
+}
+.rember input{
+    width: 10%;
+}
+.rember span{
+    margin-top: 18px;
+    color: white;
+}
+p{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+p span a{
+    color: white;
+}
+</style>
+<body>
+  <form action="">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email"><br>
+    <input type="password" placeholder="password"><br>
+    <div class="rember">
+        <input type="checkbox">
+        <span>Rember Me</span>
+    </div>
+    <button>Login</button>
+    <p>Don't have an account?<span><a href="">Sign Up</a></span></p>
+  </form>
+</body>
+</html>
