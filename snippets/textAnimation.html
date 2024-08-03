@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation with Html and Css</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #292929;
+    }
+
+    .text {
+        margin: 250px auto;
+        padding: 0 10px;
+    }
+
+    .text h1 {
+        color: white;
+        text-align: center;
+    }
+
+    .text h2 {
+        text-align: center;
+    }
+
+    .text h2::after {
+        content: " HTML";
+        color: orangered;
+        animation: switch 8s ease infinite;
+    }
+
+    @keyframes switch {
+        20% {
+            content: " CSS";
+            color: skyblue;
+        }
+
+        40% {
+            content: " JS";
+            color: yellow;
+        }
+
+        60% {
+            content: " PHP";
+            color: blueviolet;
+        }
+
+        80% {
+            content: " SQL";
+            color: palevioletred;
+        }
+
+        100% {
+            content: " Python";
+            color: brown;
+        }
+    }
+</style>
+
+<body>
+    <div class="text">
+        <h1>I Love</h1>
+        <h2></h2>
+    </div>
+</body>
+
+</html>
