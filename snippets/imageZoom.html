@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image zoom effect</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.img-container{
+    background-color: #000;
+    width: 300px;
+    height: auto;
+}
+.img{
+    overflow: hidden;
+    border: 1px solid red;
+}
+.img img{
+    transition: transform 500ms ease;
+    width: 300px;
+}
+.img:hover img{
+    transform: scale(1.5);
+}
+.img-container h3{
+    color: white;
+    text-align: center;
+}
+</style>
+<body>
+    <div class="img-container">
+        <div class="img">
+            <img src="img/hero-bg.jpg" alt="">
+        </div>
+        <h3>Valley</h3>
+    </div>
+</body>
+
+</html>
