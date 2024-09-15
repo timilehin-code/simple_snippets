@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url(../img/luke-chesser-eICUFSeirc0-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+form{
+    border: 1px solid rgba(255,255,255,.5);
+    box-shadow: 0 1px 12px rgba(0,0,0,.25) ;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    width: 400px;
+    background: none;
+    padding: 18px 15px;
+    border-radius: 5px;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+input{
+    width: 95%;
+    margin-top: 20px;
+    padding: 5px;
+   outline: transparent;
+    color: white;
+    font-size: 18px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    transition: all 0.5s ease;
+}
+
+input:invalid:not(:placeholder-shown){
+    border-color: red;
+    background: url(../img/check-red.png);
+}
+input:valid{
+    border-color: green;
+    background: url(../img/check-green.png);
+}
+input:valid, input:invalid:not(:placeholder-shown){
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px );
+}
+
+small{
+    color:red;
+    display: none;
+}
+
+input:invalid:not(:placeholder-shown) + small{
+    display: block;
+}
+
+input:invalid ~ button[type="submit"]{
+    opacity: 0.6;
+         cursor: not-allowed;
+    pointer-events: none;
+}
+
+button{
+    font-size: 18px;
+    font-weight: bold;
+    background: white;
+    color: black;
+    border: 2px solid rgba(255,255,255,.5);
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    transition: all 300ms ease;
+}
+button:hover{
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+p{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+p span a{
+    color: white;
+}
