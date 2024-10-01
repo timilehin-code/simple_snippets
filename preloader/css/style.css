@@ -1,0 +1,26 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lightgray;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove{
+    animation: fade 1s forwards;
+}
+
+@keyframes fade{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
