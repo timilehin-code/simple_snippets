@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>form validation with javaScript</title>
+  </head>
+  <body>
+    <form>
+      <h2>Sign up</h2>
+      <div class="form-control invalid">
+        <input type="text" placeholder="User name" class="uname" />
+        <small class="u-msg invalid"></small>
+      </div>
+      <div class="form-control">
+        <input type="email" placeholder="Email" class="email" />
+        <small class="e-msg invalid "></small>
+      </div>
+      <div class="form-control">
+        <input type="password" placeholder="password" class="psw" />
+        <small class="p-msg invalid"></small>
+      </div>
+      <div class="form-control">
+        <input type="password" placeholder="Confirm password" class="cpsw" />
+        <small class="cp-msg invalid"></small>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <p>
+        already have an account?<span><a href="">Sign in</a></span>
+      </p>
+    </form>
+  </body>
+  <script src="js/script.js"></script>
+</html>
