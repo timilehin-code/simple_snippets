@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typewriter Effect with css</title>
+  </head>
+  <style>
+    * {
+      background-color: #272727;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: monospace;
+    }
+    .typewriter {
+      display: flex;
+      justify-content: center;
+    }
+    .typewriter p {
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      margin-inline: auto;
+      margin-top: 20px;
+      border-right: 1px solid #f1f1f1;
+      overflow: hidden;
+      white-space: nowrap;
+      color: white;
+      animation: typewriter 4.5s steps(23) forwards, blinker 1s ease infinite;
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes blinker {
+        0%{
+            border: transparent;
+        }
+        100%{
+            border-color: #f1f1f1;
+        }
+    }
+  </style>
+  <body>
+    <div class="typewriter">
+      <div>
+        <p>Welcome to my website.</p>
+      </div>
+    </div>
+  </body>
+</html>
