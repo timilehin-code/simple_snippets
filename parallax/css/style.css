@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.backgoround{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/img_parallax3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 130vh;
+    overflow: hidden;
+}
+.backgoround h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+ 
+    font-family: Arial, Helvetica, sans-serif;
+    border: 8px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 200px auto;
+    text-shadow: 2px 2px 2px black;
+    transition: 0.5s;
+}
+.backgoround h1:hover{
+    transform: scale(1.1);
+}           
+.content{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}   
+.content h1{
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content p{
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}   
+
