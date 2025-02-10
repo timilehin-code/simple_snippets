@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: black;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  max-width: 1080px;
+}
+
+table {
+  margin-top: 50px;
+  width: 100%;
+  border: 1px solid white;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #ffffff;
+  border-collapse: collapse;
+  border-radius: 5px;
+  transition: ease 400ms;
+}
+
+table thead th {
+  color: white;
+  padding: 10px 5px;
+  border: 1px solid white;
+}
+
+table tbody td {
+  color: white;
+  padding: 10px 5px;
+  border: 1px solid white;
+  text-align: center;
+}
